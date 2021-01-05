@@ -4,10 +4,14 @@
   "description": "HomeBridge InfluxDB Integration",
   "main": "dist/accessory.js",
   "scripts": {
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist homebridge-influxdb-*.tgz",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "npm run clean && npm run build && npm pack",
     "build": "tsc"
   },
+  "keywords": [
+    "homebridge-plugin"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -17,5 +21,9 @@
   },
   "dependencies": {
     "influx": "^5.6.3"
+  },
+  "engines": {
+    "node": ">=0.12.0",
+    "homebridge": ">=0.2.0"
   }
 }
